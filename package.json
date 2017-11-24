@@ -1,0 +1,30 @@
+{
+  "name": "users-policies-restful-webapi",
+  "version": "1.0.0",
+  "description": "Test Web Api to retrieve data from users and related policies databases",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexbo93/Users-Policies-Restful-WebApi.git"
+  },
+  "keywords": [
+    "Rest",
+    "Api",
+    "Webservice"
+  ],
+  "author": "Àlex Bonillo Serra",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexbo93/Users-Policies-Restful-WebApi/issues"
+  },
+  "homepage": "https://github.com/alexbo93/Users-Policies-Restful-WebApi#readme",
+  "dependencies": {
+    "express": "^4.16.2",
+    "fs": "0.0.1-security",
+    "path": "^0.12.7"
+  }
+}
