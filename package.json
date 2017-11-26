@@ -4,8 +4,25 @@
   "description": "Test Web Api to retrieve data from users and related policies databases",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "dev": "nodemon -w src --exec \"babel-node src --presets es2015,stage-0\"",
+    "build": "babel src -s -D -d dist --presets es2015,stage-0",
+    "start": "node dist",
+    "prestart": "npm run -s build",
+    "test": "eslint src"
+  },
+  "eslintConfig": {
+    "extends": "eslint:recommended",
+    "parserOptions": {
+      "ecmaVersion": 7,
+      "sourceType": "module"
+    },
+    "env": {
+      "node": true
+    },
+    "rules": {
+      "no-console": 0,
+      "no-unused-vars": 1
+    }
   },
   "repository": {
     "type": "git",
@@ -23,8 +40,13 @@
   },
   "homepage": "https://github.com/alexbo93/Users-Policies-Restful-WebApi#readme",
   "dependencies": {
+    "body-parser": "^1.18.2",
     "express": "^4.16.2",
     "fs": "0.0.1-security",
+    "mongoose": "^4.13.5",
     "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "nodemon": "^1.12.1"
   }
 }
