@@ -4,8 +4,8 @@
   "description": "Test Web Api to retrieve data from users and related policies databases",
   "main": "server.js",
   "scripts": {
-    "dev": "nodemon -w src --exec \"babel-node src --presets es2015,stage-0\"",
-    "build": "babel src -s -D -d dist --presets es2015,stage-0",
+    "dev": "nodemon -w src --exec \"babel-node src --presets env,stage-0\"",
+    "build": "babel src -s -D -d dist --presets env,stage-0",
     "start": "node dist",
     "prestart": "npm run -s build",
     "test": "eslint src"
@@ -47,6 +47,12 @@
     "path": "^0.12.7"
   },
   "devDependencies": {
-    "nodemon": "^1.12.1"
+    "babel-cli": "^6.9.0",
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-0": "^6.5.0",
+    "eslint": "^3.19.0",
+    "nodemon": "^1.9.2"
   }
 }
