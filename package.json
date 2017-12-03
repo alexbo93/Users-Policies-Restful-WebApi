@@ -4,11 +4,11 @@
   "description": "Test Web Api to retrieve data from users and related policies databases",
   "main": "server.js",
   "scripts": {
-    "dev": "nodemon -w src --exec \"babel-node src --presets env,stage-0\"",
-    "build": "babel src -s -D -d dist --presets env,stage-0",
+    "dev": "nodemon -w app --exec \"babel-node app --presets env,stage-0\"",
+    "build": "babel app -s -D -d dist --presets env,stage-0",
     "start": "node dist",
     "prestart": "npm run -s build",
-    "test": "eslint src"
+    "test": "eslint app"
   },
   "eslintConfig": {
     "extends": "eslint:recommended",
@@ -43,6 +43,7 @@
     "body-parser": "^1.18.2",
     "express": "^4.16.2",
     "fs": "0.0.1-security",
+    "mongodb": "^2.2.33",
     "mongoose": "^4.13.5",
     "path": "^0.12.7"
   },

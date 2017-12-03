@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../app/models/User.js"],"names":["User"],"mappings":";;;;;AAAA,IAAIA,OAAO,EAAX;;kBAEeA,I","file":"User.js","sourcesContent":["let User = {};\n\nexport default User;\n"]}

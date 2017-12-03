@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../app/models/Policy.js"],"names":["Policy"],"mappings":";;;;;AAAA,IAAIA,SAAS,EAAb;;kBAEeA,M","file":"Policy.js","sourcesContent":["let Policy = {};\n\nexport default Policy;\n"]}
