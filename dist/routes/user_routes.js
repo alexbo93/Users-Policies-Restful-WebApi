@@ -16,8 +16,6 @@ var _UsersController2 = _interopRequireDefault(_UsersController);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-console.log('usercontroller HJGFDHJGFDHJGFHGJF: ', _UsersController2.default);
-
 var router = _express2.default.Router();
 
 router.get('/', function (req, res) {
@@ -28,7 +26,7 @@ router.get('/:id', function (req, res) {
   _UsersController2.default.getUsersByID(req, res);
 });
 
-router.get('/:policyId', function (req, res) {
+router.get('/policy/:policyId', function (req, res) {
   _UsersController2.default.getUsersByPolicyNumber(req, res);
 });
 

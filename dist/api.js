@@ -8,31 +8,38 @@ var _express = require('express');
 
 var _express2 = _interopRequireDefault(_express);
 
-var _db = require('./db');
-
-var _db2 = _interopRequireDefault(_db);
-
 var _routes = require('./routes');
 
 var _routes2 = _interopRequireDefault(_routes);
+
+var _config = require('../config');
+
+var _config2 = _interopRequireDefault(_config);
+
+var _mongoose = require('mongoose');
+
+var _mongoose2 = _interopRequireDefault(_mongoose);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var app = (0, _express2.default)();
 
-// TODO: Set initial config
-// let config = index.dev;
-//
-// if(app.get('env') === 'production') {
-//     config = index.prod;
-// }else if (app.get('env') === 'integration') {
-//     config = index.int;
-// }
+// TODO: Set current config
+var current = _config2.default.dev;
+if (app.get('env') === 'production') {
+  current = _config2.default.prod;
+}
+
+var db_endpoint = 'mongodb://' + current.mongodb.user + current.mongodb.password + '@' + current.mongodb.server + '/' + current.mongodb.database;
 
 // TODO: Create and enable connection to the database
-// let db_ready = new db.connect(config.mssql).then(function () {
-//     logger.info('Database connection pool ready');
-// })
+var db_ready = _mongoose2.default.connect(db_endpoint, { useMongoClient: true }, function (err, db) {
+  if (err) {
+    console.log('Error connecting to the DB' + err);
+  } else {
+    console.log('DB connection succesfull');
+  }
+});
 
 // Will have to get the port from the config
 app.use('/', _routes2.default);

@@ -11,15 +11,19 @@ var _Policy2 = _interopRequireDefault(_Policy);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 // This will receive request and response from route
-var PoliciesController = function PoliciesController(req, res) {
-  function getPolicies(req, res) {
-    res.status(200).send('List of policies in progress');
-  }
-
-  function getPoliciesByUserID(req, res) {
-    res.status(200).send('Policies for User with ID: ' + req.params.id + ' is in progress');
-  }
+var getPolicies = function getPolicies(req, res) {
+  res.status(200).send('List of policies in progress');
 };
 
-exports.default = PoliciesController;
+var getPoliciesByUserID = function getPoliciesByUserID(req, res) {
+  console.log('res: ', res);
+  console.log('req: ', req);
+  console.log('req.params: ', req.params);
+  res.status(200).send('Policies for User with ID: ' + req.params.user + ' is in progress');
+};
+
+exports.default = {
+  getPolicies: getPolicies,
+  getPoliciesByUserID: getPoliciesByUserID
+};
 //# sourceMappingURL=PoliciesController.js.map

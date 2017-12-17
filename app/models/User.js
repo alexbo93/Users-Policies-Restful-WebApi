@@ -1,3 +1,10 @@
-let User = {};
+import mongoose from 'mongoose';
+const UserSchema = new mongoose.Schema({
+  id: String,
+  name: String,
+  email: String,
+  role: String
+});
+mongoose.model('User', UserSchema);
 
-export default User;
+export default mongoose.model('User');

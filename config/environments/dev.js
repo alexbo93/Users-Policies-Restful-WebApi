@@ -10,7 +10,7 @@ let dev = {
     mongodb: {
         server: 'ds129386.mlab.com:29386',    // Can be also specified through the MSSQL_SERVER environment variable.
         user: 'userspolicies',        // Can be also specified through the MSSQL_USER environment variable.
-        password: '6ph6!nRBtT:<b{;<',    // Can be also specified through the MSSQL_PASSWORD environment variable.
+        password: '6ph6!nRBtTz<b{;<',    // Can be also specified through the MSSQL_PASSWORD environment variable.
         database: 'userspolicies',  // Can be also specified through the MSSQL_DATABASE environment variable.
     },
     // OAuth2 configuration settings.
