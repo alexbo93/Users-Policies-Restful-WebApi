@@ -7,7 +7,7 @@ const PolicySchema = new mongoose.Schema({
   inceptionDate: Date,
   installmentPayment: Boolean,
   clientId: String
-});
+}, {id: false});
 mongoose.model('Policy', PolicySchema);
 
 export default mongoose.model('Policy');
