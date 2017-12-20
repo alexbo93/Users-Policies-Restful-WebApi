@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
 // TODO: Might have issues with Date format
 const PolicySchema = new mongoose.Schema({
-  id: String,
+  _id: String,
   amountInsured: Number,
   email: String,
   inceptionDate: Date,
