@@ -1,6 +1,5 @@
 "use strict";
 // TODO: Search autodocumented functions methods
-// TODO: export models to have instances methods available
 import express from 'express';
 import policiesController from '../controllers/PoliciesController';
 
