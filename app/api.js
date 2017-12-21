@@ -8,13 +8,8 @@ import bodyParser from 'body-parser';
 
 let app = express();
 
-// TODO: Set current config
-// let current = config.dev;
-// if(app.get('env') === 'production') {
-//     current = config.prod;
-// }
-
-// Will have to get the port from the config
+// Following code lines allow set separate attributes inside the body of
+// a post REST call.
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 

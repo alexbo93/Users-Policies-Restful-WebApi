@@ -3,7 +3,6 @@ import express from 'express';
 import User from '../models/User';
 
 import jwt from 'jsonwebtoken';
-import bcrypt from 'bcryptjs';
 import config from '../../config';
 
 let router = express.Router();

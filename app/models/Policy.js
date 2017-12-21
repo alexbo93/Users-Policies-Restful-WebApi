@@ -1,5 +1,5 @@
 import mongoose from 'mongoose';
-// TODO: Might have issues with Date format
+
 const PolicySchema = new mongoose.Schema({
   _id: String,
   amountInsured: Number,

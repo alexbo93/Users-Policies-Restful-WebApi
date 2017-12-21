@@ -4,11 +4,6 @@ import userRoutes from './user_routes';
 import policyRoutes from './policy_routes';
 import authRoutes from './auth_routes';
 
-// function routes(app, db) {
-//   userRoutes(app, db);
-//   policyRoutes(app, db);
-// };
-
 let router = express.Router();
 
 router.use('/users', userRoutes);

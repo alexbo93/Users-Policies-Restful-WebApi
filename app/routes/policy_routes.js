@@ -1,5 +1,4 @@
 "use strict";
-// TODO: Search autodocumented functions methods
 import express from 'express';
 import policiesController from '../controllers/PoliciesController';
 import verifyToken from '../auth/VerifyToken';
