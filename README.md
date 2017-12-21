@@ -9,7 +9,7 @@ Node Web Api built to retrieve certain information about users from a fake JSON 
 
 ### Installation
 
-Dillinger requires [Node.js](https://nodejs.org/) in your local machine.
+This project requires [Node.js](https://nodejs.org/) in your local machine.
 
 Clone this repository in your local machine
 ```sh
