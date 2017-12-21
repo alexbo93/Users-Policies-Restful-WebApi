@@ -5,7 +5,6 @@ import async from 'async';
 // This will receive request and response from route
 
 const getUsers = (req, res) => {
-  // res.status(200).send('List of users in progress');
   User.find({}, (err, users) => {
       if (err) return res.status(500).send("There was a problem finding the users.");
       res.status(200).send(users);

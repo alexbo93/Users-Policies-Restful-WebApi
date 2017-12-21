@@ -4,6 +4,7 @@ import routes from './routes';
 import config from '../config';
 import mongoose from 'mongoose';
 import db from './db';
+import bodyParser from 'body-parser';
 
 let app = express();
 
@@ -14,6 +15,9 @@ let app = express();
 // }
 
 // Will have to get the port from the config
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+
 app.use('/', routes);
 
 // Export the app object with the connections and the routes

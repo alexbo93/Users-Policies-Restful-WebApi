@@ -2,15 +2,17 @@
 // TODO: Search autodocumented functions methods
 import express from 'express';
 import policiesController from '../controllers/PoliciesController';
+import verifyToken from '../auth/VerifyToken';
+import verifyRole from '../auth/VerifyRole';
 
 let router = express.Router();
 
-router.get('/', (req, res) => {
+router.get('/', verifyToken, (req, res) => {
   policiesController.getPolicies(req, res);
 });
 
 // Get list of policies related with userID
-router.get('/:user', (req, res) => {
+router.get('/:user_name', verifyToken, verifyRole, (req, res) => {
   policiesController.getPoliciesByUserID(req, res);
 });
 

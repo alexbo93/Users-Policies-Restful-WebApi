@@ -1,5 +1,7 @@
 "use strict";
 import Policy from '../models/Policy';
+import User from '../models/User';
+import async from 'async';
 
 // This will receive request and response from route
 const getPolicies = (req, res) => {
@@ -11,11 +13,21 @@ const getPolicies = (req, res) => {
 }
 
 const getPoliciesByUserID = (req, res) => {
-  Policy.find({clientId: req.params.user}, (err, policies) => {
-    if (err) return res.status(500).send(err);
-    if (!policies || policies.length==0) return res.status(404).send("No policies found.");
-    res.status(200).send(policies);
-  });
+  async.waterfall(
+    [
+        (callback) => {
+          User.findOne({name: req.params.user_name}, callback);
+        },
+        (result, callback) => {
+          Policy.find({"clientId": result._id}, callback)
+        }
+    ],
+    function(err,policies) {
+       if (err) return res.status(500).send(err);
+       if (!policies || policies.length==0) return res.status(404).send("No policies found.");
+       res.status(200).send(policies);
+    }
+  )
 }
 
 export default {
