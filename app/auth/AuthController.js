@@ -1,11 +1,8 @@
 // AuthController.js
-import express from 'express';
 import User from '../models/User';
 
 import jwt from 'jsonwebtoken';
-import config from '../../config';
-
-let router = express.Router();
+import config from '../config';
 
 // Making authentication with email and username
 const login = (req, res) => {

@@ -1,8 +1,6 @@
 "use strict";
 import express from 'express';
 import routes from './routes';
-import config from '../config';
-import mongoose from 'mongoose';
 import db from './db';
 import bodyParser from 'body-parser';
 

@@ -1,5 +1,5 @@
 "use strict";
-import config from '../config';
+import config from './config';
 import mongoose from 'mongoose';
 
 let current = config.dev;
@@ -8,7 +8,6 @@ let current = config.dev;
 // }
 
 const db_endpoint = `mongodb://${current.mongodb.user}:${current.mongodb.password}@${current.mongodb.server}/${current.mongodb.database}`;
-
 let db = mongoose.connect(db_endpoint, {useMongoClient: true}, (err, db) => {
   if(err) {
     console.log('Error connecting to the DB '+err);
