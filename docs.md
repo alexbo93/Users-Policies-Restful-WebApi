@@ -298,7 +298,7 @@ Retrieves a list of all the policies stored in the platform
 ```json
 {
     "_id": [policy_uuid],
-    "amountInsured": [prize_number],
+    "amountInsured": [price_number],
     "email": "opheliablankenship@quotezart.com",
     "inceptionDate": [creation_date],
     "installmentPayment": "true/false",
@@ -351,7 +351,7 @@ Retrieves list of policies related to a user name
 ```json
 {
     "_id": [policy_uuid],
-    "amountInsured": [prize_number],
+    "amountInsured": [price_number],
     "email": "opheliablankenship@quotezart.com",
     "inceptionDate": [creation_date],
     "installmentPayment": "true/false",
