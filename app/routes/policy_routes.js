@@ -11,8 +11,8 @@ router.get('/', verifyToken, (req, res) => {
 });
 
 // Get list of policies related with userID
-router.get('/:user_name', verifyToken, verifyRole, (req, res) => {
-  policiesController.getPoliciesByUserID(req, res);
+router.get('/user/:user_name', verifyToken, verifyRole, (req, res) => {
+  policiesController.getPoliciesByUserName(req, res);
 });
 
 // export default router with all the gets, not function
