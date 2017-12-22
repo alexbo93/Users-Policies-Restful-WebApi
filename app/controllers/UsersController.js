@@ -40,6 +40,7 @@ const getUserByPolicyNumber = (req, res) => {
           Policy.findById(req.params.policyId, { "clientId": 1, "_id": 0 }, callback);
         },
         (result, callback) => {
+          if (!result || result.length==0) return res.status(404).send("No policies found with this Id.");
           User.findById(result.clientId, callback)
         }
     ],
